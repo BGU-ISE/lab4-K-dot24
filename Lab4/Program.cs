@@ -19,6 +19,23 @@ namespace Lab4
             ImplementLoggingFuntion();
         }
 
+        private static Boolean checkLogin()
+        {
+            Boolean valid = false;
+            int i = 0;
+            while (!valid & i < 3)
+            {
+                Console.WriteLine("Enter username por favor:");
+                string username = Console.ReadLine();
+                Console.WriteLine("Enter password por favor:");
+                string password = Console.ReadLine();
+                if (username.Equals("Shoshi") & password.Equals("rak_bibi"))
+                    valid = true;
+                i++;
+            }
+            return valid;
+        }
+
         private static void ImplementLoggingFuntion()
         {
             /* We have 5 levels of log message. Let's test all.
