@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,9 +14,17 @@ namespace Lab4
         //Declare an instance for log4net
         private static readonly ILog Log =
               LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
+        private static Hashtable dataTable = new Hashtable();
+        
+
         static void Main(string[] args)
         {
             ImplementLoggingFuntion();
+            dataTable.Add("Raz", "170694");
+            dataTable.Add("Raviv", "Haviv");
+            dataTable.Add("TheKiller", "1234567");
+            dataTable.Add("Bibi", "ILoveMoney");
         }
 
         private static Boolean checkLogin()
