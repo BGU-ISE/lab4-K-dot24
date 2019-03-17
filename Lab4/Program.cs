@@ -30,7 +30,12 @@ namespace Lab4
                 Console.WriteLine("Enter password por favor:");
                 string password = Console.ReadLine();
                 if (username.Equals("Shoshi") & password.Equals("rak_bibi"))
+                {
                     valid = true;
+                    Console.WriteLine("Login successful!");
+                }
+                else
+                    Console.WriteLine("Wrong username and/or password!");
                 i++;
             }
             return valid;
